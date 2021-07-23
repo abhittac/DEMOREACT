@@ -1,26 +1,11 @@
-import './App.css';
-import Menu from './components/Menu';
-import { Dish } from './share/Dish';
-import React,{Component} from 'react';
-class App extends Component{
-
-  constructor(props)
-  {
-     super(props);
-     this.state={
-       Dish:Dish
-     }
-     
-  }
-
-  render(){
-    return(
-      <div className="App">
-      <Menu dishes={this.state.Dish} />
-    </div>
-    )
-  }
+import Render from './components/Render';
+import React from 'react';
+import { BrowserRouter } from "react-router-dom";
+const App=()=>{
+  return(
+    <BrowserRouter>
+    <Render/>
+    </BrowserRouter>
+  )
 }
-
-
 export default App;
